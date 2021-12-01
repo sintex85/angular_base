@@ -14,20 +14,14 @@ export class MainPageComponent{
     { nombre: 'Piccolo', poder: 7000 },
     { nombre: 'Cell', poder: 6000 },
   ];
-  nuevo: Personaje = {
+ 
+  nuevo : Personaje = {
     nombre: '',
-    poder: 0,
-  }
+    poder: 0
+  };
 
-  agregar(){
-    if (this.nuevo.nombre.trim().length === 0) { return; }
+  agregarNuevoPersonaje( argumento: Personaje ){
+    this.personajes.push(argumento);
     
-    this.personajes.push(this.nuevo);
-    this.nuevo = {
-      nombre: '',
-      poder: 0
-    }
-
-
   }
 }
